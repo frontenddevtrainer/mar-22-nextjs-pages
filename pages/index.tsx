@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Inter } from "next/font/google";
 import { useState } from "react";
 
@@ -28,6 +27,7 @@ export default function Home({
       {characters.results?.map((character) => {
         return (
           <div
+            key={character.id}
             className="p-10"
             onClick={() => {
               setCounter((counter) => counter + 1);
